@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileShare CyberSpace - File Sharing Made Easy</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"
+      integrity="sha512-OnkjbJ4TwPpgSmjXACCb5J4cJwi880VRe+vWpPDlr8M38/L3slN5uUAeOeWU2jN+4vN0gImCXFGdJmc0wO4Mig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css"
+      integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css"
+      integrity="sha512-yye/u0ehQsrVrfSd6biT17t39Rg9kNc+vENcCXZuMz2a+LWFGvXUnYuWUW6pbfYj1jcBb/C39UZw2ciQvwDDvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      data-search-pseudo-elements
+    ></script>
+  </head>
+
+  <body>
+    <img src="./logo.png" alt="cyberspace_logo" class="logo" />
+    <section class="upload-container">
+      <form action="">
+        <div class="drop-zone">
+          <div class="icon-container">
+            <img
+              src="file.svg"
+              draggable="false"
+              class="center"
+              alt="File Icon"
+            />
+            <img
+              src="file.svg"
+              draggable="false"
+              class="left"
+              alt="File Icon"
+            />
+            <img
+              src="file.svg"
+              draggable="false"
+              class="right"
+              alt="File Icon"
+            />
+          </div>
+          <input type="file" id="fileInput" />
+          <div class="title">
+            Drop your Files here or, <span id="browseBtn">browse</span>
+          </div>
+          <label id="fileName" class="fileName"></label>
+        </div>
+      </form>
+      <div class="input-container">
+        <label>phone Number</label>
+        <input type="tel" id="phone" />
+        <i id="svgCheck" class="far fa-check-circle check display-none"></i>
+        <id id="svgTimes" class="far fa-times-circle times display-none"></id>
+      </div>
+      <div class="send-btn-container">
+        <button class="disabled" id="sendButton" type="button">Send</button>
+      </div>
+      <div class="progress-container">
+        <div class="bg-progress"></div>
+
+        <div class="inner-container">
+          <div class="status">Uploading...</div>
+          <div class="percent-container">
+            <span class="percentage" id="progressPercent">0</span>%
+          </div>
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+      <div class="sharing-container">
+        <p class="expire">Link expires in 24 hrs</p>
+
+        <div class="input-container">
+          <input class="fileURL" type="text" id="fileURL" readonly />
+          <img
+            src="./copy-icon.svg"
+            id="copyURLBtn"
+            alt="copy to clipboard icon"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="image-vector"></div>
+    <div class="toast">Sample message</div>
+    <script src="index.js"></script>
+  </body>
+</html>
